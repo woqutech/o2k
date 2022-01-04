@@ -49,3 +49,55 @@ java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3
   -a binlog server的地址和端口号，默认是127.0.0.1:9191。当QDecoder输出到socket时，默认会绑定9191端口。
 
 
+## 2. C++ binlogdump范例：读取并打印binlog
+
+### 2.1 编译
+
+#### 2.1.1 环境要求
+
+* gcc版本: 不低于4.8
+* protobuf lib: 3.6
+* protobuf dev: 3.6
+* protobuf compile: 3.6
+* librdkafka: 
+
+安装protobuf:
+
+centos:
+```
+yum install protobuf protobuf-compiler protobuf-devel
+```
+
+ubuntu:
+```
+sudo apt install libprotobuf protobuf-compiler libprotobuf-dev
+```
+
+安装rdkafka:
+
+[https://github.com/edenhill/librdkafka]
+
+
+#### 2.1.2 生成protobuf序列化代码
+
+```
+cp proto/* binlogdump
+cd binlogdump
+
+protoc --cpp_out=. *.proto
+```
+
+#### 2.1.3 编译binlogdumpK
+
+```
+cd binlogdump
+
+g++ -o binlogdumpK *.cpp *.cc -I. -I/usr/local/include/librdkafka -lprotobuf -lrdkafka++
+```
+
+## 2.2 运行binlogdumpK
+
+```
+./binlogdumpK -b 127.0.0.1:9092 -n defaultapp -s qbench
+```
+
