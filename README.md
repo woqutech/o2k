@@ -101,3 +101,27 @@ g++ -o binlogdumpK *.cpp *.cc -I. -I/usr/local/include/librdkafka -lprotobuf -lr
 ./binlogdumpK -b 127.0.0.1:9092 -n defaultapp -s qbench
 ```
 
+# 3. qdcadm: qdecoder交互管理工具
+
+## 3.1 编译
+
+### 3.1.1 环境要求
+
+同binlogdump
+
+### 3.1.2 编译qdcadm
+
+```
+cd qdcadm
+
+g++ -o qdcadm *.cpp *.cc -I. -lprotobuf -lpthread
+```
+
+## 3.2 运行qdcadm
+
+```
+cd qdcadm
+./qdcadm 127.0.0.1:9193 qdecoder list
+./qdcadm 127.0.0.1:9193 qdecoder get_conf binlog.output.dest
+```
+

@@ -1,0 +1,98 @@
+syntax = "proto3";
+package com.woqutech.qdecoder.admin;
+
+option java_package = "com.woqutech.qdecoder.admin";
+option java_outer_classname = "AdminMessage";
+//option optimize_for = SPEED;
+
+/*
+ * indicate what message it is
+ */
+enum MsgType{
+    Result = 0;  // 执行结果或状态
+    Command = 1; // clinet发给server的命令
+    Metrics = 2; // transfer metrics
+    // ...
+};
+
+/*
+ * message header of all kinds of message.
+ */
+message MsgHeader {
+    MsgType msg_type = 1; // 描述每一种消息的类型，接收者根据该值解码消息。
+    // ...
+};
+
+// 拿到pkg_payload，先用MsgHeaderWrap来解码，然后再根据msg_type对整体进行解码。
+message MsgHeaderWrap {
+    MsgHeader msg_header = 1;
+};
+
+/*
+ * union val
+ */
+message MsgVal {
+    oneof msg_val {
+        int32 i32_val = 1;
+        int64 i64_val = 2;
+        double f64_val = 3;
+        string str_val = 4;
+    };
+};
+
+/*
+ * pair<string,double>
+ */
+message PairStrDbl {
+    string key = 1;
+    double val = 2;
+};
+
+/*
+ * pair<int,double>
+ */
+message PairIntDbl {
+    int64 key = 1;
+    double val = 2;
+};
+
+/*
+ * pair<string,string>
+ */
+message PairStrStr {
+    string key = 1;
+    string val = 2;
+};
+
+/************************************************************************
+ * Define messagees.
+ * NOTE: The 1st field of each message must be MsgHeader
+ ************************************************************************/
+
+/*
+ * result of executing command
+ */
+message MsgResult{
+    MsgHeader msg_header = 1;
+    string rc = 2; //return code: "OK" | "error"
+    string msg = 3; // 附加信息。如果RC=="error"，这里存储error msg。
+    repeated PairStrStr rt_pairs = 4;
+};
+
+/*
+ * command to assembler
+ */
+message MsgCmd{
+    MsgHeader msg_header = 1;
+    string cmd = 2; // command name
+    repeated PairStrStr params = 3;
+};
+
+/*
+ * metrics message
+ */
+ message MsgMetrics {
+    MsgHeader msg_header = 1;
+    double trans_commit_total = 2;            // total committed transactions
+    repeated PairIntDbl trans_begin_proc = 3; // transactions in ProcMgr
+ };
