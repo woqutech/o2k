@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dba7dd3e-46d0-4340-b0f6-42c7229aadfd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="24tqnxMijTr4RJLivOlgu2cvr7r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4666096" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FraudDetectionJob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="spendreport.FraudDetectionJob" />
+      <module name="frauddetection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spendreport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FraudDetectionJob" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dba7dd3e-46d0-4340-b0f6-42c7229aadfd" name="Default Changelist" comment="" />
+      <created>1644460400516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644460400516</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="770" y="380" width="1228" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644484875645">
+      <screen x="72" y="37" width="2488" height="1403" />
+    </state>
+    <state x="770" y="380" width="1228" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.37.2488.1403@72.37.2488.1403" timestamp="1644484875645" />
+    <state x="1077" y="373" width="461" height="744" key="#com.intellij.ide.util.MemberChooser" timestamp="1644483082110">
+      <screen x="72" y="37" width="2488" height="1403" />
+    </state>
+    <state x="1077" y="373" width="461" height="744" key="#com.intellij.ide.util.MemberChooser/72.37.2488.1403@72.37.2488.1403" timestamp="1644483082110" />
+    <state x="927" y="439" width="757" height="613" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1644485057906">
+      <screen x="72" y="37" width="2488" height="1403" />
+    </state>
+    <state x="927" y="439" width="757" height="613" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/72.37.2488.1403@72.37.2488.1403" timestamp="1644485057906" />
+    <state x="690" y="251" width="655" height="605" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1644756583458">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state x="690" y="251" width="655" height="605" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/72.37.1848.1043@72.37.1848.1043" timestamp="1644756583458" />
+    <state width="585" height="509" key="DebuggerActiveHint" timestamp="1644560238092">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="585" height="509" key="DebuggerActiveHint/72.37.1848.1043@72.37.1848.1043" timestamp="1644560238092" />
+    <state width="594" height="684" key="DebuggerActiveHint/72.37.2488.1403@72.37.2488.1403" timestamp="1644485748879" />
+    <state x="594" y="324" width="1061" height="701" key="FileChooserDialogImpl" timestamp="1644566755248">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state x="594" y="324" key="FileChooserDialogImpl/72.37.1848.1043@72.37.1848.1043" timestamp="1644566755248" />
+    <state x="775" y="423" width="1061" height="701" key="FileChooserDialogImpl/72.37.2488.1403@72.37.2488.1403" timestamp="1644485558764" />
+    <state width="1782" height="625" key="GridCell.Tab.0.bottom" timestamp="1644757318076">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="625" key="GridCell.Tab.0.bottom/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318076" />
+    <state width="2422" height="373" key="GridCell.Tab.0.bottom/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588130" />
+    <state width="1782" height="625" key="GridCell.Tab.0.center" timestamp="1644757318075">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="625" key="GridCell.Tab.0.center/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318075" />
+    <state width="2422" height="373" key="GridCell.Tab.0.center/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
+    <state width="1782" height="625" key="GridCell.Tab.0.left" timestamp="1644757318075">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="625" key="GridCell.Tab.0.left/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318074" />
+    <state width="2422" height="373" key="GridCell.Tab.0.left/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
+    <state width="1782" height="625" key="GridCell.Tab.0.right" timestamp="1644757318075">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="625" key="GridCell.Tab.0.right/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318075" />
+    <state width="2422" height="373" key="GridCell.Tab.0.right/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
+    <state width="1782" height="316" key="GridCell.Tab.1.bottom" timestamp="1644568995104">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="316" key="GridCell.Tab.1.bottom/72.37.1848.1043@72.37.1848.1043" timestamp="1644568995104" />
+    <state width="2422" height="460" key="GridCell.Tab.1.bottom/72.37.2488.1403@72.37.2488.1403" timestamp="1644490497677" />
+    <state width="1782" height="316" key="GridCell.Tab.1.center" timestamp="1644568995103">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="316" key="GridCell.Tab.1.center/72.37.1848.1043@72.37.1848.1043" timestamp="1644568995103" />
+    <state width="2422" height="460" key="GridCell.Tab.1.center/72.37.2488.1403@72.37.2488.1403" timestamp="1644490497677" />
+    <state width="1782" height="316" key="GridCell.Tab.1.left" timestamp="1644568995103">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="316" key="GridCell.Tab.1.left/72.37.1848.1043@72.37.1848.1043" timestamp="1644568995103" />
+    <state width="2422" height="460" key="GridCell.Tab.1.left/72.37.2488.1403@72.37.2488.1403" timestamp="1644490497676" />
+    <state width="1782" height="316" key="GridCell.Tab.1.right" timestamp="1644568995104">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state width="1782" height="316" key="GridCell.Tab.1.right/72.37.1848.1043@72.37.1848.1043" timestamp="1644568995104" />
+    <state width="2422" height="460" key="GridCell.Tab.1.right/72.37.2488.1403@72.37.2488.1403" timestamp="1644490497677" />
+    <state x="733" y="314" width="1155" height="855" key="Maven.ArtifactSearchDialog" timestamp="1644483356655">
+      <screen x="72" y="37" width="2488" height="1403" />
+    </state>
+    <state x="733" y="314" width="1155" height="855" key="Maven.ArtifactSearchDialog/72.37.2488.1403@72.37.2488.1403" timestamp="1644483356655" />
+    <state x="423" y="279" width="1135" height="565" key="NewModule_or_Project.wizard" timestamp="1644566759466">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state x="423" y="279" width="1135" height="565" key="NewModule_or_Project.wizard/72.37.1848.1043@72.37.1848.1043" timestamp="1644566759466" />
+    <state x="345" y="94" width="1356" height="912" key="SettingsEditor" timestamp="1644757553877">
+      <screen x="72" y="37" width="1848" height="1043" />
+    </state>
+    <state x="345" y="94" width="1356" height="912" key="SettingsEditor/72.37.1848.1043@72.37.1848.1043" timestamp="1644757553877" />
+    <state x="671" y="214" width="1280" height="1056" key="SettingsEditor/72.37.2488.1403@72.37.2488.1403" timestamp="1644485562590" />
+    <state width="1244" height="701" key="XDebugger.FullValuePopup" timestamp="1644489855648">
+      <screen x="72" y="37" width="2488" height="1403" />
+    </state>
+    <state width="1244" height="701" key="XDebugger.FullValuePopup/72.37.2488.1403@72.37.2488.1403" timestamp="1644489855648" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spendreport/FraudDetectionJob.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spendreport/BinlogTransactionSchema.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spendreport/FraudDetector.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
