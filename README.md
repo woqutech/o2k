@@ -2,6 +2,8 @@
 
 QDecoder是一款高性能、免费的oracle数据订阅同步软件，支持从Oracle数据库读取在线日志文件和归档日志文件，解析出DDL和DML操作，输出binlog到kafka供下游应用程序进行数据订阅。
 
+本软件仓库提供了Java、C++版本的读取QDecoder输出的示例代码JBinlogDumpK/JBinlogDumpS/binlogdumpK；提供了动态查询和修改QDecoder状态及配置的工具QDadm；提供了QDecoder跟Flink结合的示例程序FlinkSample/frauddetection.
+
 ## 1. java binlogdump范例：读取并打印binlog
 
 QDecoder从oracle解析归档日志文件和在线日志文件，生成binlog，并写入kafka，或文件，或socket。
