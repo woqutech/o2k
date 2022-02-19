@@ -129,3 +129,8 @@ cd qdcadm
 ./qdcadm 127.0.0.1:9193 qdecoder get_conf binlog.output.dest
 ```
 
+# 4.联系方式
+微信群：扫描下方二维码，添加企业微信，发送“QDecoder社区交流”后，拉入群聊
+
+![QDecoder拉群二维码](https://user-images.githubusercontent.com/96899373/154804920-449767b0-91e3-4945-9fa9-c031e1209d1a.png)
+
