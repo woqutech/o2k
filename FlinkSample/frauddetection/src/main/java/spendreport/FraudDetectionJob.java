@@ -37,7 +37,7 @@ public class FraudDetectionJob {
 		Properties properties = new Properties();
 		properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
 		properties.setProperty("group.id", "flink.test");
-		FlinkKafkaConsumer<Transaction> kafkaSource = new FlinkKafkaConsumer<Transaction>("defaultapp.qdecoder.binlog.qdecoder", new BinlogTransactionSchema(), properties);
+		FlinkKafkaConsumer<Transaction> kafkaSource = new FlinkKafkaConsumer<Transaction>("defaultapp.o2k.binlog.qdecoder", new BinlogTransactionSchema(), properties);
 		kafkaSource.setStartFromEarliest();
 
 		DataStream<Transaction> transactions = env
