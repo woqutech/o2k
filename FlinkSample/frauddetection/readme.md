@@ -1,6 +1,6 @@
 [toc]
 
-使用QDecoder + Flink实现信用卡欺诈交易检测
+使用o2k + Flink实现信用卡欺诈交易检测
 =====
 
 # 1. 环境要求：
@@ -19,17 +19,17 @@ conn YOUR_ORACLE_USER_NAME/your_oracle_password
 create table account(accountid int primary key, balance number);
 ```
 
-## 2.2 启动QDecoder
+## 2.2 启动o2k
 ```
-docker run -it --name=qdecoder -p 9191:9191 -p 9092:9092 --pull always registry.cn-hangzhou.aliyuncs.com/woqutech/qdecoder
+docker run -it --name=o2k -p 9191:9191 -p 9092:9092 --pull always registry.cn-hangzhou.aliyuncs.com/woqutech/o2k
 ```
 
 以下配置需要特别注意一下：
-* 配置项1.1中列出的sql，请以dba权限在oracle中执行，这将配置QDecoder需要的帐号，以及查询系统表需要的权限。
+* 配置项1.1中列出的sql，请以dba权限在oracle中执行，这将配置o2k需要的帐号，以及查询系统表需要的权限。
 * 配置项2.1: 输入将要检测的表：YOUR_ORACLE_USER_NAME.account，格式为owner_name.table_name
 * 配置项3.1: 选择输出到kafka, bootstrap.servers可以不输入，直接在容器中启动kafka。account表的变更将写入topic: defaultapp.YOUR_ORACLE_USER_NAME.binlog.qdecoder
 
-等QDecoder启动后，可以按照提示运行binlogdumpK，从kafka读取binlog并打印出来。
+等o2k启动后，可以按照提示运行binlogdumpK，从kafka读取binlog并打印出来。
 
 现在更新account表，看binlogdumpK的输出：
 ```
@@ -40,9 +40,9 @@ commit;
 ```
 如果网络比较快，应该马上就能看到binlogdumpK输出了相应的binlog。
 
-注意: binlogdumpK只是为了观察一下QDecoder的输出，你可以随时关掉它，这并不影响QDecoder和Flink程序的运行。
+注意: binlogdumpK只是为了观察一下o2k的输出，你可以随时关掉它，这并不影响o2k和Flink程序的运行。
 
-现在，QDecoder已经正常工作了。
+现在，o2k已经正常工作了。
 
 ## 2.3 启动flink程序：FraudDetectionJob
 * 用IDEA打开frauddetection
