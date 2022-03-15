@@ -4,8 +4,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include <google/protobuf/text_format.h>
-#include "QDDEntry.pb.h"
-#include "QDecoderProtocol.pb.h"
+#include "PkgEntryDef.h"
 #include <arpa/inet.h>
 
 #include "CBinlogKafka.h"
@@ -32,10 +31,8 @@ typedef struct _topic_info
     std::string schemaName;
     std::vector<std::string> tableName;
     std::string bootstrap;
-    
+    std::string suffix{".binlog"};
 }topic_info_t;
-
-#define BINLOG_TOPIC_SUFIX ".binlog.qdecoder"
 
 //使用说明
 void usage(const char* szProgramName)
@@ -53,6 +50,7 @@ void usage(const char* szProgramName)
     fprintf(stderr, "-g             : consume group, default is binlogdumpK\n");
     fprintf(stderr, "-C             : it is 1 to commit offset, other not commit\n");
     fprintf(stderr, "-r             : print raw storevalue\n");
+    fprintf(stderr, "-x             : topic name suffix, default is .binlog, topic_name=nodeName.schemaName.suffix\n");
     fprintf(stderr, "-h             : print this help message.\n");
     // fprintf(stderr, "-v             : print this help message.\n");
 }
@@ -89,7 +87,7 @@ int main(int argc,char * argv[])
         exit(-1);
     }
 
-    topic_info.topicName = topic_info.nodeName + "." + topic_info.schemaName + BINLOG_TOPIC_SUFIX;
+    topic_info.topicName = topic_info.nodeName + "." + topic_info.schemaName + topic_info.suffix;
     PintfArg(topic_info);
 
     CBinlogKafkaReader myTest(topic_info.bootstrap.c_str(), topic_info.topicName.c_str(), topic_info.groupIdNum);
@@ -172,6 +170,9 @@ int GetInputArg(int argc, char *const *argv, topic_info_t *topic)
         case 'r':
             printRaw = true;
             break;
+        case 'x':
+            topic->suffix = optarg;
+            break;
         default:
             usage(argv[0]);
             exit(-1);
@@ -190,7 +191,7 @@ int PrintSql(const char * buf, int bufLen)
 
     /* print entry info */
     std::string data(buf, bufLen);
-    com::woqutech::qdecoder::entry::Entry row_entry;
+    pb_entry::Entry row_entry;
     row_entry.ParseFromString(data);
     std::string str;
     std::string _storevalue;
@@ -199,35 +200,35 @@ int PrintSql(const char * buf, int bufLen)
         row_entry.clear_storevalue();
     }
     google::protobuf::TextFormat::PrintToString(row_entry, &str);
-    printf("\n-- binlog :\n%s", str.c_str());
+    printf("\n-- binlog :%s", str.c_str());
 
     const std::string& storevalue = printRaw? row_entry.storevalue() : _storevalue;
     str.clear();
 
     /* print entry info */
     ::google::protobuf::Message *msg=NULL;
-    if((row_entry.entrytype())==com::woqutech::qdecoder::entry::TRANSACTIONEND) {
-        com::woqutech::qdecoder::entry::TransactionEnd tran_end;
+    if((row_entry.entrytype())==pb_entry::TRANSACTIONEND) {
+        pb_entry::TransactionEnd tran_end;
         tran_end.ParseFromString(storevalue);
         google::protobuf::TextFormat::PrintToString(tran_end, &str);
-    } else if((row_entry.entrytype())==com::woqutech::qdecoder::entry::TRANSACTIONBEGIN) {
-        com::woqutech::qdecoder::entry::TransactionBegin tran_begin;
+    } else if((row_entry.entrytype())==pb_entry::TRANSACTIONBEGIN) {
+        pb_entry::TransactionBegin tran_begin;
         tran_begin.ParseFromString(storevalue);
         google::protobuf::TextFormat::PrintToString(tran_begin, &str);
-    } else if((row_entry.entrytype())==com::woqutech::qdecoder::entry::ROWDATA) {
-        com::woqutech::qdecoder::entry::RowChange row_change;
+    } else if((row_entry.entrytype())==pb_entry::ROWDATA) {
+        pb_entry::RowChange row_change;
         row_change.ParseFromString(storevalue);
         google::protobuf::TextFormat::PrintToString(row_change, &str);
 
         gbStat.TotalRows++;
         switch (row_change.eventtype()) {
-            case com::woqutech::qdecoder::entry::EventType::INSERT:
+            case pb_entry::EventType::INSERT:
                 gbStat.InsertCnt++;
                 break;
-            case com::woqutech::qdecoder::entry::EventType::UPDATE:
+            case pb_entry::EventType::UPDATE:
                 gbStat.UpdateCnt++;
                 break;
-            case com::woqutech::qdecoder::entry::EventType::DELETE:
+            case pb_entry::EventType::DELETE:
                 gbStat.DeleteCnt++;
                 break;
             default:
