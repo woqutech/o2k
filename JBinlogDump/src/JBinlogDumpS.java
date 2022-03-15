@@ -12,12 +12,13 @@ import org.apache.commons.cli.HelpFormatter;
 
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.woqutech.qdecoder.packages.QDecoderPacket.Ack;
-import com.woqutech.qdecoder.packages.QDecoderPacket.ClientAuth;
-import com.woqutech.qdecoder.packages.QDecoderPacket.Dump;
-import com.woqutech.qdecoder.packages.QDecoderPacket.HeartBeat;
-import com.woqutech.qdecoder.packages.QDecoderPacket.Packet;
-import com.woqutech.qdecoder.packages.QDecoderPacket.PacketType;
+
+import com.woqutech.binlog.packages.BinlogPacket.Ack;
+import com.woqutech.binlog.packages.BinlogPacket.ClientAuth;
+import com.woqutech.binlog.packages.BinlogPacket.Dump;
+import com.woqutech.binlog.packages.BinlogPacket.HeartBeat;
+import com.woqutech.binlog.packages.BinlogPacket.Packet;
+import com.woqutech.binlog.packages.BinlogPacket.PacketType;
 
 /**
  * connect to binlog server, demp binlog

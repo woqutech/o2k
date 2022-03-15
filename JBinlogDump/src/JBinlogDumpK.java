@@ -18,7 +18,7 @@ import org.apache.commons.cli.HelpFormatter;
  */
 public class JBinlogDumpK {
 
-    private static final String topicSufix = ".binlog.qdecoder";
+    private static String topicSufix = ".binlog";
     private static String appName = "defaultapp";
     private static List<String> schemas;
     private static String kafkaServer = "127.0.0.1:9092";
@@ -51,6 +51,8 @@ public class JBinlogDumpK {
         options.addOption("c", "auto.commit", true, "是否自动提交消费位点, 1:自动提交, 0:不提交， 默认是0");
         // -w 
         options.addOption("w", "wait", true, "消费完是否继续等待新的binlog, 1:等待, 0:不等待, 默认是1");
+        // -x
+        options.addOption("x", "suffix", true, "topic后缀，默认为.binlog");
 
         CommandLineParser parser = new DefaultParser();
         CommandLine commandLine = null;
@@ -117,6 +119,9 @@ public class JBinlogDumpK {
             } else {
                 fgWait = false;
             }
+        }
+        if (commandLine.hasOption("x")) {
+            topicSufix = commandLine.getOptionValue("x");
         }
 
         Properties properties = new Properties();

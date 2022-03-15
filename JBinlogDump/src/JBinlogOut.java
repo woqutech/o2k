@@ -4,11 +4,11 @@ import java.io.PrintStream;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.TextFormat;
 
-import com.woqutech.qdecoder.entry.QDDEntry.Entry;
-import com.woqutech.qdecoder.entry.QDDEntry.RowChange;
-import com.woqutech.qdecoder.entry.QDDEntry.TransactionEnd;
-import com.woqutech.qdecoder.entry.QDDEntry.TransactionBegin;
-import com.woqutech.qdecoder.entry.QDDEntry.EventType;
+import com.woqutech.binlog.entry.BinlogEntry.Entry;
+import com.woqutech.binlog.entry.BinlogEntry.RowChange;
+import com.woqutech.binlog.entry.BinlogEntry.TransactionEnd;
+import com.woqutech.binlog.entry.BinlogEntry.TransactionBegin;
+import com.woqutech.binlog.entry.BinlogEntry.EventType;
 
 /**
  * deserialize binlog and print

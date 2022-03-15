@@ -1,7 +1,7 @@
 syntax = "proto3";
-package com.woqutech.qdecoder.admin;
+package com.woqutech.admin;
 
-option java_package = "com.woqutech.qdecoder.admin";
+option java_package = "com.woqutech.admin";
 option java_outer_classname = "AdminMessage";
 //option optimize_for = SPEED;
 

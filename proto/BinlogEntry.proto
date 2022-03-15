@@ -1,8 +1,8 @@
 syntax = "proto3";
-package com.woqutech.qdecoder.entry;
+package com.woqutech.binlog.entry;
 
-option java_package = "com.woqutech.qdecoder.entry";
-option java_outer_classname = "QDDEntry";
+option java_package = "com.woqutech.binlog.entry";
+option java_outer_classname = "BinlogEntry";
 option optimize_for = SPEED;
 
 /****************************************************************

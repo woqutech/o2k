@@ -1,8 +1,8 @@
 syntax = "proto3";
-package com.woqutech.qdecoder.packages;
+package com.woqutech.binlog.packages;
 
-option java_package = "com.woqutech.qdecoder.packages";
-option java_outer_classname = "QDecoderPacket";
+option java_package = "com.woqutech.binlog.packages";
+option java_outer_classname = "BinlogPacket";
 option optimize_for = SPEED;
 
 enum Compression {
