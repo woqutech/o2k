@@ -27,7 +27,7 @@ docker run -it --name=o2k -p 9191:9191 -p 9092:9092 --pull always registry.cn-ha
 以下配置需要特别注意一下：
 * 配置项1.1中列出的sql，请以dba权限在oracle中执行，这将配置o2k需要的帐号，以及查询系统表需要的权限。
 * 配置项2.1: 输入将要检测的表：YOUR_ORACLE_USER_NAME.account，格式为owner_name.table_name
-* 配置项3.1: 选择输出到kafka, bootstrap.servers可以不输入，直接在容器中启动kafka。account表的变更将写入topic: defaultapp.YOUR_ORACLE_USER_NAME.binlog.qdecoder
+* 配置项3.1: 选择输出到kafka, bootstrap.servers可以不输入，直接在容器中启动kafka。account表的变更将写入topic: defaultapp.YOUR_ORACLE_USER_NAME.binlog
 
 等o2k启动后，可以按照提示运行binlogdumpK，从kafka读取binlog并打印出来。
 
