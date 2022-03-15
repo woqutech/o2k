@@ -19,7 +19,7 @@ JBinlogDump工具分别从kafka和binlog server读取binlog:
 ```
 cd JBinlogDump
 
-javac -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-proto.jar src/*.java
+javac -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/binlog-serializer.jar src/*.java
 ```
 
 ### 1.2 运行JBinlogDumpK: 从kafka读取binlog并打印出来
@@ -27,7 +27,7 @@ javac -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3
 ```
 cd JBinlogDump
 
-java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-proto.jar:src JBinlogDumpK -b 127.0.0.1:9092 -s schema1,schema2
+java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/binlog-serializer.jar:src JBinlogDumpK -b 127.0.0.1:9092 -s schema1,schema2
 ```
 参数说明:
 
@@ -43,7 +43,7 @@ java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3
 ```
 cd JBinlogDump
 
-java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-proto.jar:src JBinlogDumpS -a 127.0.0.1:9191
+java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/binlog-serializer.jar:src JBinlogDumpS -a 127.0.0.1:9191
 ```
 
 参数说明:

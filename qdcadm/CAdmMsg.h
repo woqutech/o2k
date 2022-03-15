@@ -3,7 +3,7 @@
 #define _CADMIN_MSG_H
 
 #include "SimpleSocketFunc.h"
-#include "QDecoderAdmin.pb.h"
+#include "AdminMsg.pb.h"
 
 #define LEN_ERR_MSG  (512)
 #define LEN_ADM_PKG  (1024)
@@ -62,7 +62,7 @@
 #define StrCaseEq(str1, str2) (strcasecmp(str1,str2)==0)
 
 
-namespace admin = com::woqutech::qdecoder::admin;
+namespace admin = com::woqutech::admin;
 
 class CMsgRW
 {
