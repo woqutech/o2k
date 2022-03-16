@@ -3,8 +3,30 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dba7dd3e-46d0-4340-b0f6-42c7229aadfd" name="Default Changelist" comment="" />
+    <list default="true" id="dba7dd3e-46d0-4340-b0f6-42c7229aadfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,12 +39,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="24tqnxMijTr4RJLivOlgu2cvr7r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -64,6 +91,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="770" y="380" width="1228" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644484875645">
       <screen x="72" y="37" width="2488" height="1403" />
@@ -91,25 +129,25 @@
     </state>
     <state x="594" y="324" key="FileChooserDialogImpl/72.37.1848.1043@72.37.1848.1043" timestamp="1644566755248" />
     <state x="775" y="423" width="1061" height="701" key="FileChooserDialogImpl/72.37.2488.1403@72.37.2488.1403" timestamp="1644485558764" />
-    <state width="1782" height="625" key="GridCell.Tab.0.bottom" timestamp="1644757318076">
+    <state width="1782" height="622" key="GridCell.Tab.0.bottom" timestamp="1647395821810">
       <screen x="72" y="37" width="1848" height="1043" />
     </state>
-    <state width="1782" height="625" key="GridCell.Tab.0.bottom/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318076" />
+    <state width="1782" height="622" key="GridCell.Tab.0.bottom/72.37.1848.1043@72.37.1848.1043" timestamp="1647395821810" />
     <state width="2422" height="373" key="GridCell.Tab.0.bottom/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588130" />
-    <state width="1782" height="625" key="GridCell.Tab.0.center" timestamp="1644757318075">
+    <state width="1782" height="622" key="GridCell.Tab.0.center" timestamp="1647395821809">
       <screen x="72" y="37" width="1848" height="1043" />
     </state>
-    <state width="1782" height="625" key="GridCell.Tab.0.center/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318075" />
+    <state width="1782" height="622" key="GridCell.Tab.0.center/72.37.1848.1043@72.37.1848.1043" timestamp="1647395821809" />
     <state width="2422" height="373" key="GridCell.Tab.0.center/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
-    <state width="1782" height="625" key="GridCell.Tab.0.left" timestamp="1644757318075">
+    <state width="1782" height="622" key="GridCell.Tab.0.left" timestamp="1647395821808">
       <screen x="72" y="37" width="1848" height="1043" />
     </state>
-    <state width="1782" height="625" key="GridCell.Tab.0.left/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318074" />
+    <state width="1782" height="622" key="GridCell.Tab.0.left/72.37.1848.1043@72.37.1848.1043" timestamp="1647395821808" />
     <state width="2422" height="373" key="GridCell.Tab.0.left/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
-    <state width="1782" height="625" key="GridCell.Tab.0.right" timestamp="1644757318075">
+    <state width="1782" height="622" key="GridCell.Tab.0.right" timestamp="1647395821810">
       <screen x="72" y="37" width="1848" height="1043" />
     </state>
-    <state width="1782" height="625" key="GridCell.Tab.0.right/72.37.1848.1043@72.37.1848.1043" timestamp="1644757318075" />
+    <state width="1782" height="622" key="GridCell.Tab.0.right/72.37.1848.1043@72.37.1848.1043" timestamp="1647395821810" />
     <state width="2422" height="373" key="GridCell.Tab.0.right/72.37.2488.1403@72.37.2488.1403" timestamp="1644492588129" />
     <state width="1782" height="316" key="GridCell.Tab.1.bottom" timestamp="1644568995104">
       <screen x="72" y="37" width="1848" height="1043" />

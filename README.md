@@ -125,8 +125,8 @@ g++ -o qdcadm *.cpp *.cc -I. -lprotobuf -lpthread
 
 ```
 cd qdcadm
-./qdcadm 127.0.0.1:9193 qdecoder list
-./qdcadm 127.0.0.1:9193 qdecoder get_conf binlog.output.dest
+./qdcadm 127.0.0.1:9193 woqutech list
+./qdcadm 127.0.0.1:9193 woqutech get_conf binlog.output.dest
 ```
 
 # 4.联系方式
