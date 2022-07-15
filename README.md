@@ -1,6 +1,6 @@
 # o2k 工具
 
-o2k是一款高性能、免费的oracle数据订阅同步软件，支持从Oracle数据库读取在线日志文件和归档日志文件，解析出DDL和DML操作，输出binlog到kafka供下游应用程序进行数据订阅。
+o2ks社区版是一款高性能、“免费”的oracle数据订阅同步软件，支持从Oracle数据库的1521端口直接读取在线日志文件和归档日志文件，解析出DDL和DML操作，输出binlog event到kafka供下游应用程序进行数据订阅。
 
 本软件仓库提供了Java、C++版本的读取o2k输出的示例代码JBinlogDumpK/JBinlogDumpS/binlogdumpK；提供了动态查询和修改o2k状态及配置的工具qdcadm；提供了o2k跟Flink结合的示例程序FlinkSample/frauddetection.
 
